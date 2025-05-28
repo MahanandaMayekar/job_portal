@@ -6,8 +6,7 @@ export type LoginType = {
 };
 
 export type LoginProps = {
-    loginData: LoginType;
-    setLoginData: React.Dispatch<React.SetStateAction<LoginType>>;
+
     handleFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
     register: UseFormRegister<LoginType>;
 errors: FieldErrors<LoginType>;

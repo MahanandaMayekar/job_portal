@@ -7,26 +7,25 @@ import { motion } from "framer-motion";
 import type { RegisterProps } from "../../types/register/registerType";
 
 const Register = ({
-  registerData,
-  setRegisterData,
   role,
   setRole,
   handleFormSubmit,
+  register,
+  errors,
 }: RegisterProps) => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center ">
+    <div className="relative min-h-screen flex items-center justify-center">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center "
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${login})`,
-          // or '100vh', '100%', etc.
         }}
       />
 
       {/* Content */}
       <motion.div
-        className="relative text-4xl font-bold bg-gray-50 opacity-90 m-10 p-10 rounded-3xl w-full sm:w-1/2 text-blac shadow"
+        className="relative text-4xl font-bold bg-gray-50 opacity-90 m-10 p-10 rounded-3xl w-full sm:w-1/2 text-black shadow"
         initial={{ opacity: 0, scale: 0.95, y: -250 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -48,7 +47,7 @@ const Register = ({
           justifyContent="center"
           alignItems="center"
         >
-          <div className="flex flex-col items-center justify-center gap-1 ">
+          <div className="flex flex-col items-center justify-center gap-1">
             <GroupButton
               button1="Candidate"
               button2="Employer"
@@ -56,71 +55,57 @@ const Register = ({
               handleOnClickBtn2={() => setRole("employer")}
               variant="contained"
               color="secondary"
+              role={role}
             />
-            <p className="text-xs text-center text-gray-500">
+
+            <p className="text-sm text-center text-gray-400">
               Are you a{" "}
-              <span className="font-bold text-gray-700">Candidate</span> or{" "}
-              <span className="font-bold text-gray-700">Employer?</span>
+              <span className="font-bold text-gray-700">{role?role:"candidate or employer"}?</span> 
+              
             </p>
           </div>
+
           <form
             className="flex flex-col gap-4 w-2/3 m-auto"
             onSubmit={handleFormSubmit}
           >
             <TextField
-              id="text-input"
               label="Full Name"
               variant="outlined"
-              type="text"
               size="small"
-              value={registerData.fullName}
-              onChange={(e) =>
-                setRegisterData({ ...registerData, fullName: e.target.value })
-              }
-              required
-              autoFocus
-              
+              {...register("fullName")}
+              error={!!errors.fullName}
+              helperText={errors.fullName?.message}
             />
             <TextField
-              id="email-input"
               label="Email"
               variant="outlined"
-              type="email"
               size="small"
-              value={registerData.email}
-              onChange={(e) =>
-                setRegisterData({ ...registerData, email: e.target.value })
-              }
-              required
+              type="email"
+              {...register("email")}
+              error={!!errors.email}
+              helperText={errors.email?.message}
             />
             <TextField
-              id="password-input"
               label="Password"
               variant="outlined"
-              type="password"
               size="small"
-              value={registerData.password}
-              onChange={(e) =>
-                setRegisterData({ ...registerData, password: e.target.value })
-              }
-              required
+              type="password"
+              {...register("password")}
+              error={!!errors.password}
+              helperText={errors.password?.message}
             />
             <TextField
-              id="ConfirmPassword-input"
               label="Confirm Password"
               variant="outlined"
-              type="password"
               size="small"
-              required
-              value={registerData.confirmPassword}
-              onChange={(e) =>
-                setRegisterData({
-                  ...registerData,
-                  confirmPassword: e.target.value,
-                })
-              }
+              type="password"
+              {...register("confirmPassword")}
+              error={!!errors.confirmPassword}
+              helperText={errors.confirmPassword?.message}
             />
-            <p className="text-xs text-center text-gray-500 flex flex-row items-center justify-center">
+
+            <p className="text-xs text-center text-gray-500 flex items-center justify-center">
               Already have an account?
               <Link to="/login">
                 <span className="font-extrabold text-gray-700 hover:text-blue-600 hover:underline ml-2">
@@ -128,6 +113,7 @@ const Register = ({
                 </span>
               </Link>
             </p>
+
             <Button variant="contained" color="secondary" type="submit">
               Sign up
             </Button>

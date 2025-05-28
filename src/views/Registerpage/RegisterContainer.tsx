@@ -1,65 +1,84 @@
-import { useState } from "react"
-import Register from "./Register"
+import { useEffect, useState } from "react";
+import Register from "./Register";
 import type { RegisterType } from "../../types/register/registerType";
-import type { RoleType } from "../../types/register/registerType";
-import { useEffect } from "react";
 import { toast } from "react-toastify";
 import { useCreateUserMutation } from "../../store/register/registerService";
 import { useNavigate } from "react-router-dom";
+import { RegisterSchema } from "../../validation/RegisterSchema";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import type { UserType } from "../../types/user/UserType";
+
 const RegisterContainer = () => {
-  const navigate = useNavigate()
-  const [role, setRole] = useState<RoleType>(null);
-  useEffect(() => {
-    setRegisterData((prev) => ({
-      ...prev,
-      role: role,
-    }));
-  }, [role]);
-  const [createUser] = useCreateUserMutation();
+  const navigate = useNavigate();
+  const [role, setRole] = useState<string>("");
 
-  const [registerData, setRegisterData] = useState<RegisterType>({
-    fullName: "John naik",
-    email: "john@mail.com",
-    password: "changeme",
-    confirmPassword: "changeme",
-    role: role,
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm<RegisterType>({
+    resolver: yupResolver(RegisterSchema) as any,
+    defaultValues: {
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      role: "",
+      isFirstLogin: true,
+      interestedCategories:[]
+    },
   });
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (!role) {
+  useEffect(() => {
+    setValue("role", role);
+  }, [role, setValue]);
 
-      toast.error("Please select whether you are candidate or employer")
-      return
+  const [createUser] = useCreateUserMutation();
+ 
 
+  const handleFormSubmit = async (data:RegisterType) => {
+   
+
+    if (!data.role) {
+      toast.error("Please select whether you are candidate or employer");
+      return; // stop form submit here
     }
-    if (registerData.password !== registerData.confirmPassword) {
-      toast.error("Passwords do not match");
-      return;
-    }
+    console.log(data.role);
+    const user: UserType = {
+      // id is omitted here since backend assigns it
+      fullName: data.fullName,
+      email: data.email,
+      password: data.password,
+      role: data.role,
+      isFirstLogin: data.isFirstLogin,
+      interestedCategories: data.interestedCategories,
+      savedPosts: [], // initialize empty array
+      appliedPosts: [], // fixed spelling and initialized empty array
+    };
+
     try {
-      const response = await createUser(registerData).unwrap();
+      const response = await createUser(user).unwrap();
       console.log("response", response);
+
       toast.success("User registered successfully!");
-      navigate("/login")
-
-
+      navigate("/login");
     } catch (error) {
       toast.error("Failed to register user");
       console.error("API Error:", error);
-
     }
-
-
   };
+
   return (
     <Register
-      registerData={registerData}
-      setRegisterData={setRegisterData}
-      role={role}
       setRole={setRole}
-      handleFormSubmit={handleFormSubmit}
+      role={role}
+      handleFormSubmit={handleSubmit(handleFormSubmit)}
+      register={register}
+      errors={errors}
     />
   );
-}
+};
 
-export default RegisterContainer
+export default RegisterContainer;

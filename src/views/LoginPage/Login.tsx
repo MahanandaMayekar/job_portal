@@ -1,11 +1,12 @@
 import login from "../../assets/login1.jpg"
 import { Stack, TextField } from "@mui/material";
-import GroupButton from "../../components/GroupButton";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { LoginProps } from "../../types/login/LoginTypes";
-const Login = ({ loginData, setLoginData, handleFormSubmit,register,errors }: LoginProps) => {
+const Login = ({ handleFormSubmit, register, errors }: LoginProps) => {
+
+
   return (
     <div className="relative min-h-screen flex items-center justify-center ">
       {/* Background image */}
@@ -39,21 +40,7 @@ const Login = ({ loginData, setLoginData, handleFormSubmit,register,errors }: Lo
           justifyContent="center"
           alignItems="center"
         >
-          <div className="flex flex-col items-center justify-center gap-1 ">
-            <GroupButton
-              button1="Candidate"
-              button2="Employer"
-              handleOnClickBtn1={() => console.log("btn 1")}
-              handleOnClickBtn2={() => console.log("btn 2")}
-              variant="contained"
-              color="secondary"
-            />
-            <p className="text-xs text-center text-gray-500">
-              Are you a{" "}
-              <span className="font-bold text-gray-700">Candidate</span> or{" "}
-              <span className="font-bold text-gray-700">Employer?</span>
-            </p>
-          </div>
+          
           <form
             onSubmit={handleFormSubmit}
             className="flex flex-col gap-4 w-2/3 m-auto"
@@ -67,10 +54,7 @@ const Login = ({ loginData, setLoginData, handleFormSubmit,register,errors }: Lo
               {...register("email")}
               error={!!errors.email}
               helperText={errors.email?.message}
-              value={loginData.email}
-              onChange={(e) =>
-                setLoginData({ ...loginData, email: e.target.value })
-              }
+             
             />
             <TextField
               id="password-input"
@@ -81,10 +65,7 @@ const Login = ({ loginData, setLoginData, handleFormSubmit,register,errors }: Lo
               error={!!errors.password}
               helperText={errors.password?.message}
               {...register("password")}
-              value={loginData.password}
-              onChange={(e) =>
-                setLoginData({ ...loginData, password: e.target.value })
-              }
+              
             />
             <p className="text-xs text-center text-gray-500 flex flex-row justify-between">
               {" "}

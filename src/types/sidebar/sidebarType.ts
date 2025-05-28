@@ -1,3 +1,6 @@
+
+
 export type SidebarProps = {
-    setCategory:React.Dispatch<React.SetStateAction<boolean>>
+    setCategory: React.Dispatch<React.SetStateAction<boolean>>
+    category:boolean
 }

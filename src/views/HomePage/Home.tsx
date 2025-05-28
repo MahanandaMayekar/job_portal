@@ -12,7 +12,7 @@ import { MdDesignServices } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import { SiAdblock } from "react-icons/si";
 import { motion } from "framer-motion";
-import JobCard from "../../components/JobCard";
+
 import { BiPhoneCall } from "react-icons/bi";
 import { FaStarOfDavid } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
@@ -21,13 +21,14 @@ import type { HomeProps } from "../../types/home/homeType";
 
 
 
-const Home = ({ jobs, isLoading, error }: HomeProps) => {
+const Home = ({  isLoading, error }: HomeProps) => {
   const token = localStorage.getItem("token");
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
   return (
     <div>
-      {!token ? <Carousel /> : ""}
+  
+      <Carousel /> 
 
       <SearchBox />
       <Title
@@ -77,25 +78,7 @@ const Home = ({ jobs, isLoading, error }: HomeProps) => {
         <CategoryCard icon={<FaLaptopCode size={50} />} title="Developement" />
         <CategoryCard icon={<SiAdblock size={50} />} title="Human Resource" />
       </div>
-      <div className="bg-blue-100/30 p-1 mt-6 mb-10 pb-4 rounded-md border">
-        <div>
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 5, ease: "easeOut" }}
-          >
-            <Title
-              text1="Latest Job Opportunities"
-              text2="Find your next career move from our featured listings"
-            />
-          </motion.div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-14">
-          {jobs.map((job) => (
-            <JobCard key={job.id} job={job} />
-          ))}
-        </div>
-      </div>
+      
 
       <div className="w-full px-4 md:px-10 lg:px-20 py-12 bg-white">
         <motion.div

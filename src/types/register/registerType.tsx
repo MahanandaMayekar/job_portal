@@ -1,25 +1,31 @@
-export type RegisterType = {
-    fullName: string,
-    email: string,
-    password: string,
-  confirmPassword: string,
-    role:RoleType
-}
+import type { UseFormRegister, FieldErrors } from "react-hook-form";
 
-export type RegisterProps = {
-  registerData: RegisterType;
-  setRegisterData: React.Dispatch<React.SetStateAction<RegisterType>>;
-  role: RoleType;
-  setRole: React.Dispatch<React.SetStateAction<RoleType>>;
-  handleFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+export type RegisterType = {
+  id?: string;
+  fullName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  role: string;
+  isFirstLogin: boolean;
+  interestedCategories:string[]
 };
 
-export type RoleType = "candidate" | "employer" | null;
+export type RegisterProps = {
+  role: string;
+  setRole: React.Dispatch<React.SetStateAction<string>>;
+  handleFormSubmit:  () => void;
+  register: UseFormRegister<RegisterType>;
+  errors: FieldErrors<RegisterType>;
+};
+
 
 export const registerInitialState: RegisterType = {
   fullName: "",
   email: "",
   password: "",
   confirmPassword: "",
-  role: null, // or "candidate" if you want to default it
+  role: "",
+  isFirstLogin: true,
+  interestedCategories: [],
 };

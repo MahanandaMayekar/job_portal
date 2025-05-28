@@ -17,14 +17,6 @@
       "role": "candidate"
     },
     {
-      "id": "5ea5",
-      "fullName": "John naik",
-      "email": "john@mail.com",
-      "password": "changeme",
-      "confirmPassword": "changeme",
-      "role": "employer"
-    },
-    {
       "id": "01c8",
       "fullName": "mahananda mayekar",
       "email": "mahananda@mail.com",
@@ -39,6 +31,98 @@
       "password": "diksha",
       "confirmPassword": "diksha",
       "role": "candidate"
+    },
+    {
+      "id": "7555",
+      "fullName": "jmaitri",
+      "email": "jmaitri@gmail.com",
+      "password": "jmaitri",
+      "confirmPassword": "jmaitri",
+      "role": "candidate"
+    },
+    {
+      "id": "548e",
+      "fullName": "john silva",
+      "email": "john@mail.com",
+      "password": "changeme",
+      "confirmPassword": "changeme",
+      "role": "candidate",
+      "isFirstLogin": false
+    },
+    {
+      "id": "7973",
+      "fullName": "mahananda mayekar",
+      "email": "mahananda@gmail.com",
+      "password": "mahananda123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Design",
+        "Development"
+      ],
+      "savedPosts": [],
+      "appliedPosts": []
+    },
+    {
+      "id": "133b",
+      "fullName": "jony",
+      "email": "jony1@gmail.com",
+      "password": "jony123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Development",
+        "Design"
+      ],
+      "savedPosts": [],
+      "appliedPosts": []
+    },
+    {
+      "id": "3036",
+      "fullName": "jonny m",
+      "email": "jonny@gmail.com",
+      "password": "jonny123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Design",
+        "Development"
+      ],
+      "savedPosts": [],
+      "appliedPosts": []
+    },
+    {
+      "id": "9015",
+      "fullName": "dik",
+      "email": "dik@gmail.com",
+      "password": "dik123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Development",
+        "Marketing",
+        "Design"
+      ],
+      "savedPosts": [],
+      "appliedPosts": []
+    },
+    {
+      "id": "6ad2",
+      "fullName": "samiksha",
+      "email": "samiksha@gmail.com",
+      "password": "sam123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Design",
+        "Development"
+      ],
+      "savedPosts": [],
+      "appliedPosts": []
     }
   ],
   "jobs": [

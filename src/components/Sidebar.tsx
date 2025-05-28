@@ -2,14 +2,14 @@ import { Button } from "@mui/material";
 import { SiApostrophe } from "react-icons/si";
 import { TfiLayoutGrid4Alt } from "react-icons/tfi";
 import type { SidebarProps } from "../types/sidebar/sidebarType";
-const Sidebar = ({ setCategory }: SidebarProps) => {
+const Sidebar = ({ setCategory,category }: SidebarProps) => {
   return (
-    <div className="w-[15%] h-screen bg-purple-900 text-white flex flex-col gap-4 p-4 scroll-none">
+    <div className="w-[15%]  bg-purple-900 text-white flex flex-col gap-4 p-4 scroll-none max-h-full ">
       <h1 className="font-serif">{">>  "}Dashboard</h1>
       <hr />
 
       <div
-        className="hover:bg-purple-800 p-1"
+        className={` p-1 ${!category ? "bg-purple-800" : ""}`}
         onClick={() => setCategory(false)}
       >
         <Button
@@ -21,7 +21,7 @@ const Sidebar = ({ setCategory }: SidebarProps) => {
         </Button>
       </div>
       <div
-        className="hover:bg-purple-800 p-1"
+        className={` p-1 ${category ? "bg-purple-800" : ""}`}
         onClick={() => setCategory(true)}
       >
         <Button
@@ -32,6 +32,7 @@ const Sidebar = ({ setCategory }: SidebarProps) => {
           Category
         </Button>
       </div>
+      
     </div>
   );
 };

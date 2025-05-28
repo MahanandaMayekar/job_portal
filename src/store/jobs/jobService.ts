@@ -12,14 +12,18 @@ export const jobApi = createApi({
       query: () => "jobs",
     }),
 
-        fetchJobsByCategory: builder.query<JobType[], string>({
+    fetchJobsByCategory: builder.query<JobType[], string>({
       query: (category) => `jobs?category=${category}`,
     }),
     fetchJobById: builder.query<JobType, string>({
-      query:(id)=>`jobs/${id}`
-    })
+      query: (id) => `jobs/${id}`,
+    }),
   }),
 });
 
 // Hooks
-export const { useFetchJobsQuery, useFetchJobsByCategoryQuery, useFetchJobByIdQuery, } = jobApi;
+export const {
+  useFetchJobsQuery,
+  useFetchJobsByCategoryQuery,
+  useFetchJobByIdQuery,
+} = jobApi;
