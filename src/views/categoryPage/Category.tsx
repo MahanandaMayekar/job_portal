@@ -39,7 +39,7 @@ const Category = () => {
   const interestedCategories = user?.interestedCategories;
 
   const recomendedCategories = jobs?.filter((job) =>
-    interestedCategories.includes(job.category)
+    interestedCategories?.includes(job.category)
   );
 
   if (isLoading) return <p>Loading...</p>;

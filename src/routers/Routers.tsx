@@ -7,6 +7,7 @@ import RegisterContainer from "../views/Registerpage/RegisterContainer";
 import HomeContainer from "../views/HomePage/HomeContainer";
 import DashboardContainer from "../views/dashboardPage/DashboardContainer";
 import JobDetailsPage from "../views/jobDetails/JobDetailsPage";
+import SavedJobPage from "../views/savedJob/SavedJobPage";
 const Routers = () => {
   return (
     <div>
@@ -19,6 +20,7 @@ const Routers = () => {
           <Route path="register" element={<RegisterContainer />} />
           <Route path="dashboard" element={<DashboardContainer />} />
           <Route path="/job/:id" element={<JobDetailsPage />} />
+          <Route path="/savedJobs" element={<SavedJobPage />} />
         </Route>
       </Routes>
     </div>

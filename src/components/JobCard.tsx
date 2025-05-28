@@ -4,24 +4,27 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logo from "../assets/search2.jpg";
 import type { JobCardProps } from "../types/jobs/jobTypes";
 import { useNavigate } from "react-router-dom";
+import { useUpdateUserMutation } from "../store/register/registerService";
+import { saveJob } from "../utils/SaveJobs";
 const JobCard = ({ job }: JobCardProps) => {
   // Parse the qualifications string into an array
-  const navigate=useNavigate()
- 
+  const navigate = useNavigate();
+
+  const [updateUser, { isSuccess }] = useUpdateUserMutation();
+
+  const handleSaveJob = () => saveJob(job, updateUser);
 
   return (
     <div className="w-70  flex flex-col gap-4 border rounded-2xl p-4 shadow hover:shadow-lg transition duration-300 relative bg-white">
       {/* Image and Save Button */}
       <div className="w-full h-32 overflow-hidden rounded-md relative">
-        <img
-          src={logo}
-          alt="Job Logo"
-          className="w-full h-full object-cover"
-          onClick={() => navigate(`/job/${job.id}`)}
-        />
+        <img src={logo} alt="Job Logo" className="w-full h-full object-cover" />
         <IconButton
-          className="!absolute top-1 right-2 z-40 !text-gray-600 hover:!text-blue-600 text-[1.8rem] hover:!bg-gray-300"
+          className={`!absolute top-1 right-2 z-40 !text-gray-600 hover:!text-blue-600 text-[1.8rem] hover:!bg-gray-300 ${
+            isSuccess ? "!bg-blue-400" : ""
+          }`}
           size="large"
+          onClick={handleSaveJob}
         >
           <TurnedInNotIcon fontSize="inherit" />
         </IconButton>

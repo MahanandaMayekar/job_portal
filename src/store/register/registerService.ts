@@ -21,7 +21,7 @@ export const registerApi = createApi({
     updateUser: builder.mutation<UserType, { id: string; updateData: Partial<UserType> }>({
       query: ({ id, updateData }) => ({
         url: `users/${id}`,
-        method: "PATCH",
+        method: "PUT",
         body: updateData,
       }),
       invalidatesTags: ["User"],
@@ -33,4 +33,4 @@ export const registerApi = createApi({
   }),
 });
 
-export const { useCreateUserMutation, useGetUserByEmailQuery, useUpdateUserMutation, useLazyGetUserByEmailQuery,useGetUserByIdQuery } = registerApi;
+export const { useCreateUserMutation, useGetUserByEmailQuery, useUpdateUserMutation, useLazyGetUserByEmailQuery,useGetUserByIdQuery,useLazyGetUserByIdQuery } = registerApi;

@@ -9,11 +9,12 @@ import { RiMoneyRupeeCircleLine, RiTimerFlashLine } from "react-icons/ri";
 import { useParams } from "react-router-dom";
 import JobCard from "../../components/JobCard";
 import Title from "../../components/Title";
-
+import { saveJob } from "../../utils/SaveJobs";
 import {
   useFetchJobByIdQuery,
   useFetchJobsByCategoryQuery,
 } from "../../store/jobs/jobService";
+import { useUpdateUserMutation } from "../../store/register/registerService";
 
 const JobDetailsPage = () => {
   const { id } = useParams<string>()
@@ -24,6 +25,12 @@ const JobDetailsPage = () => {
     "Collaborative Environment",
     "Inclusive Culture",
   ];
+  const [updateUser] = useUpdateUserMutation();
+  const handleSaveJob = () => {
+    if (!job) return; // Don't call saveJob if job isn't loaded
+    saveJob(job, updateUser);
+  };
+ 
   const postedDaysAgo = Math.floor(
     (new Date().getTime() - new Date(job?.created_at!).getTime()) /
       (1000 * 3600 * 24)
@@ -55,7 +62,7 @@ const JobDetailsPage = () => {
         </div>
         <div className="flex flex-row gap-6 my-auto">
           <Button variant="contained">Apply for job</Button>
-          <Button endIcon={<TurnedInNotIcon />} variant="outlined">
+          <Button endIcon={<TurnedInNotIcon />} variant="outlined" onClick={handleSaveJob}>
             {" "}
             Save post
           </Button>

@@ -1,0 +1,40 @@
+import { useGetUserByIdQuery } from "../../store/register/registerService"
+import JobCard from "../../components/JobCard";
+import Title from "../../components/Title";
+const SavedJobPage = () => {
+    const storedUser = JSON.parse(localStorage.getItem("user") || "{}")
+    const {
+      data: user,
+      isLoading,
+      isError,
+    } = useGetUserByIdQuery(storedUser?.id);
+    const savedJobs = user?.savedPosts
+    
+    if (isLoading) return <p>Loading saved jobs...</p>;
+    if (isError ) return <p>Failed to load saved jobs.</p>;
+  return (
+    <div className="p-6 min-h-screen bg-gray-50">
+      <Title
+        text1="Your Saved Jobs"
+        text2=" Here are the jobs you've saved for later. Revisit and apply when you're
+        ready!"
+      />
+
+      
+
+      {savedJobs?.length === 0 ? (
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center text-gray-600 dark:text-gray-300 mt-4">
+          You have no saved jobs.
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-8">
+          {savedJobs?.map((job) => (
+            <JobCard key={job.id} job={job} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default SavedJobPage

@@ -51,8 +51,12 @@ const CustomMenu = () => {
         }}
       >
         <MenuItem value="profile">Profile</MenuItem>
-        <MenuItem value="dashboard" onClick={()=>navigate("/dashboard")}>Dashboard</MenuItem>
-        <MenuItem value="saved">Saved Posts</MenuItem>
+        <MenuItem value="dashboard" onClick={() => navigate("/dashboard")}>
+          Dashboard
+        </MenuItem>
+        <MenuItem value="saved" onClick={() => navigate("/savedJobs")}>
+          Saved Posts
+        </MenuItem>
         <MenuItem value="saved">Applied Posts</MenuItem>
         <hr />
 

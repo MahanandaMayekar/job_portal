@@ -66,15 +66,15 @@ const LoginContainer = () => {
 
       localStorage.setItem("token", fakeToken);
       const userData = {
-        id:id,
+        id:User.id,
         fullName: User.fullName,
         email: User.email,
         role: User.role,
         avatar: `https://robohash.org/${User.fullName}`,
         interestedCategories: User.interestedCategories,
         isFirstLogin: User.isFirstLogin,
-        savedPosts: [],
-            appliedPosts:[]
+        savedPosts:User.savedPosts,
+            appliedPosts:User.appliedPosts
       };
       localStorage.setItem("user", JSON.stringify(userData));
      
