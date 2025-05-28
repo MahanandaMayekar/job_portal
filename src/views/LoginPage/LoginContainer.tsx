@@ -66,6 +66,7 @@ const LoginContainer = () => {
 
       localStorage.setItem("token", fakeToken);
       const userData = {
+        id:id,
         fullName: User.fullName,
         email: User.email,
         role: User.role,
@@ -110,8 +111,9 @@ const LoginContainer = () => {
                 interestedCategories: categories,
               },
             });
+            const user={id:id,...result.data}
            
-            localStorage.setItem("user", JSON.stringify(result.data));
+            localStorage.setItem("user", JSON.stringify(user));
             
 
             setShowModal(false);

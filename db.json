@@ -123,6 +123,21 @@
       ],
       "savedPosts": [],
       "appliedPosts": []
+    },
+    {
+      "id": "75ec",
+      "fullName": "soniya",
+      "email": "soniya@gmail.com",
+      "password": "soniya123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Marketing",
+        "Human Resource"
+      ],
+      "savedPosts": [],
+      "appliedPosts": []
     }
   ],
   "jobs": [
