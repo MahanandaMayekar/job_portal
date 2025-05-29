@@ -8,6 +8,8 @@ import HomeContainer from "../views/HomePage/HomeContainer";
 import DashboardContainer from "../views/dashboardPage/DashboardContainer";
 import JobDetailsPage from "../views/jobDetails/JobDetailsPage";
 import SavedJobPage from "../views/savedJob/SavedJobPage";
+import FirstLogin from "../views/FirstLoginPage/FirstLogin";
+import ApplyJobPage from "../views/ApplyJob/ApplyJobPage";
 const Routers = () => {
   return (
     <div>
@@ -21,6 +23,8 @@ const Routers = () => {
           <Route path="dashboard" element={<DashboardContainer />} />
           <Route path="/job/:id" element={<JobDetailsPage />} />
           <Route path="/savedJobs" element={<SavedJobPage />} />
+          <Route path="/firstLogin" element={<FirstLogin />} />
+          <Route path="/job/:id/applyJob" element={<ApplyJobPage />} />
         </Route>
       </Routes>
     </div>

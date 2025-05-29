@@ -15,8 +15,9 @@ import {
   useFetchJobsByCategoryQuery,
 } from "../../store/jobs/jobService";
 import { useUpdateUserMutation } from "../../store/register/registerService";
-
+import { useNavigate } from "react-router-dom";
 const JobDetailsPage = () => {
+  const navigate=useNavigate()
   const { id } = useParams<string>()
   const { data: job, isLoading, isError } = useFetchJobByIdQuery(id!);
   const { data: CategoryJobs } = useFetchJobsByCategoryQuery(job?.category!);
@@ -61,8 +62,17 @@ const JobDetailsPage = () => {
           </div>
         </div>
         <div className="flex flex-row gap-6 my-auto">
-          <Button variant="contained">Apply for job</Button>
-          <Button endIcon={<TurnedInNotIcon />} variant="outlined" onClick={handleSaveJob}>
+          <Button
+            variant="contained"
+            onClick={() => navigate(`/job/${job?.id}/applyJob`)}
+          >
+            Apply for job
+          </Button>
+          <Button
+            endIcon={<TurnedInNotIcon />}
+            variant="outlined"
+            onClick={handleSaveJob}
+          >
             {" "}
             Save post
           </Button>
@@ -224,9 +234,7 @@ const JobDetailsPage = () => {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-14">
           {CategoryJobs?.slice(0, 8).map((categoryJob) => (
-         
-              <JobCard job={categoryJob} key={categoryJob.id} />
-           
+            <JobCard job={categoryJob} key={categoryJob.id} />
           ))}
         </div>
       </div>

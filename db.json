@@ -93,6 +93,70 @@
         }
       ],
       "appliedPosts": []
+    },
+    {
+      "id": "900b",
+      "fullName": "siya m",
+      "email": "siya@gmail.com",
+      "password": "siya123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Design",
+        "Development"
+      ],
+      "savedPosts": [
+        {
+          "id": "c9aa1d9e-c00e-4c64-9801-ec5e7cc00830",
+          "title": "Frontend Developer",
+          "description": "We are looking for a results-driven Marketing Executive to help shape our brand's voice across digital platforms. You will lead the planning and execution of marketing campaigns across channels like SEO, Google Ads, email, and social media. This role requires a mix of creativity and analytical skills to optimize campaigns for performance. You'll also track key metrics, generate reports, and work with cross-functional teams to ensure consistent brand messaging. The ideal candidate is proactive, data-driven, and excited about connecting with customers through compelling digital experiences.",
+          "company": "TechHarvest",
+          "location": "Hyderabad, India",
+          "salary_from": 80000,
+          "salary_to": 120000,
+          "employment_type": "Full-time",
+          "application_deadline": "2025-07-01",
+          "qualifications": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Unit Testing"
+          ],
+          "contact": "+91-99887-66554",
+          "job_category": "Frontend Developer",
+          "is_remote_work": 1,
+          "number_of_opening": 3,
+          "created_at": "2025-05-10",
+          "updated_at": "2025-05-19",
+          "category": "Development"
+        },
+        {
+          "id": "b32d3c4e-5612-42bc-a9dc-bf5c4578c5d4",
+          "title": "UX Designer",
+          "description": "We are looking for a creative and detail-oriented UX Designer to join our design team. You will be responsible for crafting user journeys that are intuitive, accessible, and visually appealing across web and mobile platforms. This role requires strong skills in user research, wireframing, prototyping, and visual design using tools like Figma and Adobe XD. Your work will directly impact user satisfaction and engagement, making you a crucial part of the product development cycle. If you’re passionate about solving user problems through design, we want you on our team.",
+          "company": "PixelForge",
+          "location": "Bangalore, India",
+          "salary_from": 60000,
+          "salary_to": 100000,
+          "employment_type": "Contract",
+          "application_deadline": "2025-06-15",
+          "qualifications": [
+            "Figma",
+            "User Testing",
+            "Responsive Design",
+            "Adobe XD"
+          ],
+          "contact": "+91-81234-56789",
+          "job_category": "UX Designer",
+          "is_remote_work": 1,
+          "number_of_opening": 1,
+          "created_at": "2025-04-20",
+          "updated_at": "2025-05-15",
+          "category": "Design"
+        }
+      ],
+      "appliedPosts": []
     }
   ],
   "jobs": [

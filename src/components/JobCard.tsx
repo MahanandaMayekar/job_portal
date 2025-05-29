@@ -77,6 +77,7 @@ const JobCard = ({ job }: JobCardProps) => {
           size="small"
           endIcon={<ArrowForwardIcon />}
           className="!text-xs !rounded-xl !p-2"
+          onClick={() => navigate(`/job/${job?.id}/applyJob`)}
         >
           Apply Now
         </Button>
