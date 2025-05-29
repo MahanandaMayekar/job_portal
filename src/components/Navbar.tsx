@@ -49,9 +49,12 @@ const Navbar = () => {
             />
           </motion.div>
         )}
-        <IconButton size="large" onClick={handleClick}>
-          <SearchIcon />
-        </IconButton>
+
+        {token && (
+          <IconButton size="large" onClick={handleClick}>
+            <SearchIcon />
+          </IconButton>
+        )}
 
         {token && <CustomMenu />}
       </div>
