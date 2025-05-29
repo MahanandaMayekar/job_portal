@@ -111,7 +111,10 @@ const LoginContainer = () => {
                 interestedCategories: categories,
               },
             });
-            const user={id:id,...result.data}
+            const user = { id: id, ...result.data }
+            console.log("user first time", user);
+            console.log("user first time result", result);
+            
            
             localStorage.setItem("user", JSON.stringify(user));
             

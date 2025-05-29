@@ -1,5 +1,5 @@
 import{ Carousel} from "../../components/Carausal";
-import SearchBox from "../../components/SearchBox";
+import SearchBox from "../../components/Hero";
 import Title from "../../components/Title";
 import StepCard from "../../components/StepCard";
 import { RiAccountPinCircleFill } from "react-icons/ri";

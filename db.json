@@ -1,99 +1,6 @@
 {
   "users": [
     {
-      "id": "2",
-      "fullName": "Emily Roy",
-      "email": "emily.roy@example.com",
-      "password": "test1234",
-      "confirmPassword": "test1234",
-      "role": "employer"
-    },
-    {
-      "id": "3",
-      "fullName": "David Lee",
-      "email": "david.lee@example.com",
-      "password": "pass4321",
-      "confirmPassword": "pass4321",
-      "role": "candidate"
-    },
-    {
-      "id": "01c8",
-      "fullName": "mahananda mayekar",
-      "email": "mahananda@mail.com",
-      "password": "mahananda ",
-      "confirmPassword": "mahananda ",
-      "role": "candidate"
-    },
-    {
-      "id": "2941",
-      "fullName": "diksha mayekar",
-      "email": "diksha@mail.com",
-      "password": "diksha",
-      "confirmPassword": "diksha",
-      "role": "candidate"
-    },
-    {
-      "id": "7555",
-      "fullName": "jmaitri",
-      "email": "jmaitri@gmail.com",
-      "password": "jmaitri",
-      "confirmPassword": "jmaitri",
-      "role": "candidate"
-    },
-    {
-      "id": "548e",
-      "fullName": "john silva",
-      "email": "john@mail.com",
-      "password": "changeme",
-      "confirmPassword": "changeme",
-      "role": "candidate",
-      "isFirstLogin": false
-    },
-    {
-      "id": "7973",
-      "fullName": "mahananda mayekar",
-      "email": "mahananda@gmail.com",
-      "password": "mahananda123",
-      "role": "candidate",
-      "isFirstLogin": false,
-      "interestedCategories": [
-        "Design",
-        "Development"
-      ],
-      "savedPosts": [],
-      "appliedPosts": []
-    },
-    {
-      "id": "133b",
-      "fullName": "jony",
-      "email": "jony1@gmail.com",
-      "password": "jony123",
-      "role": "candidate",
-      "isFirstLogin": false,
-      "interestedCategories": [
-        "Accounting",
-        "Development",
-        "Design"
-      ],
-      "savedPosts": [],
-      "appliedPosts": []
-    },
-    {
-      "id": "3036",
-      "fullName": "jonny m",
-      "email": "jonny@gmail.com",
-      "password": "jonny123",
-      "role": "candidate",
-      "isFirstLogin": false,
-      "interestedCategories": [
-        "Accounting",
-        "Design",
-        "Development"
-      ],
-      "savedPosts": [],
-      "appliedPosts": []
-    },
-    {
       "id": "9015",
       "fullName": "dik",
       "email": "dik@gmail.com",
@@ -125,7 +32,41 @@
       "appliedPosts": []
     },
     {
+      "id": "31ab",
+      "fullName": "jony maitri",
+      "email": "jony1@gmail.com",
+      "password": "jony123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Design",
+        "Development"
+      ],
       "savedPosts": [
+        {
+          "id": "des-001",
+          "title": "UI/UX Designer",
+          "company": "PixelCraft Studios",
+          "location": "Bangalore, India",
+          "salary_from": 60000,
+          "salary_to": 90000,
+          "employment_type": "Full-time",
+          "application_deadline": "2025-07-15",
+          "qualifications": [
+            "Figma expert",
+            "3+ years UI/UX",
+            "Strong portfolio",
+            "Knowledge of accessibility"
+          ],
+          "contact": "+91-9922334455",
+          "job_category": "UX Designer",
+          "is_remote_work": 1,
+          "number_of_opening": 1,
+          "created_at": "2025-05-10",
+          "updated_at": "2025-05-20",
+          "category": "Design",
+          "description": "Join our creative team as a UI/UX Designer to craft engaging user experiences for web and mobile platforms. You'll work on intuitive interfaces, user flows, and high-fidelity prototypes for diverse projects across industries."
+        },
         {
           "id": "dev-001",
           "title": "Frontend Developer (React)",
@@ -149,223 +90,9 @@
           "updated_at": "2025-05-21",
           "category": "Development",
           "description": "We are looking for a highly skilled Frontend Developer with expertise in React to join our development team. The ideal candidate should have strong experience in building dynamic, responsive, and user-centric web applications using modern technologies like TypeScript, Redux Toolkit, and Tailwind CSS. You will be responsible for transforming design wireframes and mockups into highly scalable and performant user interfaces. Collaborating with backend developers, designers, and product managers, you will play a key role in shaping our user experience and contributing to the success of our product ecosystem."
-        },
-        {
-          "id": "d8126e49-fc0e-4ae3-88e1-1454cd8c91fa",
-          "title": "Marketing Executive",
-          "description": "Plan and execute digital marketing campaigns across multiple channels.",
-          "company": "BrandNest",
-          "location": "Delhi, India",
-          "salary_from": 40000,
-          "salary_to": 85000,
-          "employment_type": "Full-time",
-          "application_deadline": "2025-07-05",
-          "qualifications": [
-            "Google Ads",
-            "SEO/SEM",
-            "Email Marketing",
-            "Analytics"
-          ],
-          "contact": "+91-77777-12345",
-          "job_category": "Marketing Executive",
-          "is_remote_work": 0,
-          "number_of_opening": 5,
-          "created_at": "2025-05-05",
-          "updated_at": "2025-05-21",
-          "category": "Marketing"
-        },
-        {
-          "id": "mkt-001",
-          "title": "Digital Marketing Executive",
-          "company": "BrandBoosters",
-          "location": "Delhi, India",
-          "salary_from": 50000,
-          "salary_to": 85000,
-          "employment_type": "Full-time",
-          "application_deadline": "2025-07-01",
-          "qualifications": [
-            "SEO/SEM expertise",
-            "Google Ads",
-            "Content Strategy",
-            "2+ years experience"
-          ],
-          "contact": "+91-9012345678",
-          "job_category": "Marketing Executive",
-          "is_remote_work": 0,
-          "number_of_opening": 2,
-          "created_at": "2025-05-15",
-          "updated_at": "2025-05-20",
-          "category": "Marketing",
-          "description": "As a Digital Marketing Executive, you will be responsible for planning, implementing, and managing online marketing strategies that help us increase brand awareness, generate leads, and drive conversions. You will work across multiple platforms including SEO, SEM, Google Ads, and social media to execute data-driven campaigns. You will collaborate with our design and content teams to ensure that campaigns are aligned with our overall marketing goals. A strong understanding of analytics and performance measurement is critical to continually optimize and improve campaign performance."
-        },
-        {
-          "id": "c9aa1d9e-c00e-4c64-9801-ec5e7cc00830",
-          "title": "Frontend Developer",
-          "description": "We are looking for a results-driven Marketing Executive to help shape our brand's voice across digital platforms. You will lead the planning and execution of marketing campaigns across channels like SEO, Google Ads, email, and social media. This role requires a mix of creativity and analytical skills to optimize campaigns for performance. You'll also track key metrics, generate reports, and work with cross-functional teams to ensure consistent brand messaging. The ideal candidate is proactive, data-driven, and excited about connecting with customers through compelling digital experiences.",
-          "company": "TechHarvest",
-          "location": "Hyderabad, India",
-          "salary_from": 80000,
-          "salary_to": 120000,
-          "employment_type": "Full-time",
-          "application_deadline": "2025-07-01",
-          "qualifications": [
-            "React",
-            "TypeScript",
-            "Tailwind CSS",
-            "Unit Testing"
-          ],
-          "contact": "+91-99887-66554",
-          "job_category": "Frontend Developer",
-          "is_remote_work": 1,
-          "number_of_opening": 3,
-          "created_at": "2025-05-10",
-          "updated_at": "2025-05-19",
-          "category": "Development"
-        },
-        {
-          "id": "a1e1b4af-8344-44a1-8a6e-12e2a1f4a1f0",
-          "title": "Senior Accountant",
-          "company": "FinSight Ltd",
-          "location": "Mumbai, India",
-          "salary_from": 55000,
-          "salary_to": 95000,
-          "employment_type": "Full-time",
-          "application_deadline": "2025-06-30",
-          "qualifications": [
-            "CA certification",
-            "5+ years experience",
-            "Tally, QuickBooks",
-            "Attention to detail"
-          ],
-          "contact": "+91-99001-12345",
-          "job_category": "Accounting",
-          "is_remote_work": 0,
-          "number_of_opening": 2,
-          "created_at": "2025-05-01",
-          "updated_at": "2025-05-10",
-          "category": "Accounting",
-          "description": "We are looking for a creative and detail-oriented UX Designer to join our design team. You will be responsible for crafting user journeys that are intuitive, accessible, and visually appealing across web and mobile platforms. This role requires strong skills in user research, wireframing, prototyping, and visual design using tools like Figma and Adobe XD. Your work will directly impact user satisfaction and engagement, making you a crucial part of the product development cycle. If you’re passionate about solving user problems through design, we want you on our team."
-        },
-        {
-          "id": "e44a2c15-4320-4f10-8a44-4827ff54c100",
-          "title": "HR Manager",
-          "description": "Oversee the HR department including hiring, onboarding, and employee relations.",
-          "company": "TalentVerse",
-          "location": "Chennai, India",
-          "salary_from": 75000,
-          "salary_to": 110000,
-          "employment_type": "Full-time",
-          "application_deadline": "2025-06-25",
-          "qualifications": [
-            "MBA HR",
-            "5+ years experience",
-            "PeopleSoft",
-            "Strong interpersonal skills"
-          ],
-          "contact": "+91-88888-55555",
-          "job_category": "HR Manager",
-          "is_remote_work": 0,
-          "number_of_opening": 1,
-          "created_at": "2025-05-11",
-          "updated_at": "2025-05-20",
-          "category": "Human Resource"
-        },
-        {
-          "id": "g3e5f6a7-b78d-4c63-b0b4-dcd3c3e75fa4",
-          "title": "Full Stack Developer",
-          "description": "Work on end-to-end development using Node.js and React.",
-          "company": "CodeSprint",
-          "location": "Remote",
-          "salary_from": 95000,
-          "salary_to": 140000,
-          "employment_type": "Full-time",
-          "application_deadline": "2025-07-15",
-          "qualifications": [
-            "Node.js",
-            "React",
-            "MongoDB",
-            "REST APIs"
-          ],
-          "contact": "+91-90909-10101",
-          "job_category": "Full Stack Developer",
-          "is_remote_work": 1,
-          "number_of_opening": 4,
-          "created_at": "2025-05-13",
-          "updated_at": "2025-05-21",
-          "category": "Development"
-        },
-        {
-          "id": "i8822b9d-c9fa-4263-8d31-7ed6a01c874e",
-          "title": "Content Marketing Specialist",
-          "description": "Write, optimize, and distribute high-impact content to boost brand awareness.",
-          "company": "BuzzBrew",
-          "location": "Kolkata, India",
-          "salary_from": 45000,
-          "salary_to": 85000,
-          "employment_type": "Freelance",
-          "application_deadline": "2025-06-20",
-          "qualifications": [
-            "SEO Writing",
-            "Copywriting",
-            "Content Strategy",
-            "WordPress"
-          ],
-          "contact": "+91-80123-45678",
-          "job_category": "Content Marketing",
-          "is_remote_work": 1,
-          "number_of_opening": 1,
-          "created_at": "2025-05-10",
-          "updated_at": "2025-05-18",
-          "category": "Marketing"
-        },
-        {
-          "id": "e42e3791-7a10-48b9-b17b-31c0c6db3d99",
-          "title": "Recruitment Specialist",
-          "description": "Source, interview, and hire candidates.",
-          "company": "TalentHub",
-          "location": "Jaipur, India",
-          "salary_from": 50000,
-          "salary_to": 75000,
-          "employment_type": "Full-time",
-          "application_deadline": "Wed, 12/13/2023",
-          "qualifications": [
-            "Recruitment experience",
-            "Interviewing skills",
-            "ATS knowledge"
-          ],
-          "contact": "987-321-6540",
-          "job_category": "Human Resource",
-          "is_remote_work": 0,
-          "number_of_opening": 1,
-          "created_at": "Thu, 09/14/2023",
-          "updated_at": "Fri, 09/22/2023",
-          "category": "Human Resource"
-        },
-        {
-          "id": "5c9a7f8d-1e12-4e8b-b3a0-56789b43aabd",
-          "title": "HR Assistant",
-          "description": "Assist HR with payroll and record keeping.",
-          "company": "Workforce Solutions",
-          "location": "Pune, India",
-          "salary_from": 30000,
-          "salary_to": 45000,
-          "employment_type": "Full-time",
-          "application_deadline": "Fri, 12/29/2023",
-          "qualifications": [
-            "Payroll software",
-            "Data entry",
-            "Organizational skills"
-          ],
-          "contact": "444-333-2222",
-          "job_category": "Human Resource",
-          "is_remote_work": 0,
-          "number_of_opening": 2,
-          "created_at": "Tue, 11/28/2023",
-          "updated_at": "Wed, 12/06/2023",
-          "category": "Human Resource"
         }
       ],
-      "id": "75ec"
+      "appliedPosts": []
     }
   ],
   "jobs": [

@@ -7,7 +7,13 @@ import { SiAdblock } from "react-icons/si";
 import JobCard from "../../components/JobCard";
 import Title from "../../components/Title";
 import { useFetchJobsByCategoryQuery } from "../../store/jobs/jobService";
+import { useMemo } from "react";
+import { createFuseInstance } from "../../utils/createFuseInstance";
 
+
+type CategoryPageProps = {
+  search?: string;
+};
 const categories = [
   {
     icon: <FaMoneyCheckDollar size={32} />,
@@ -32,7 +38,8 @@ const categories = [
   },
 ];
 
-const Category = () => {
+
+const Category = ({ search = "" }: CategoryPageProps) => {
   const [cate, setCate] = useState<string>("");
   const { data: jobs, isLoading, error } = useFetchJobsByCategoryQuery(cate);
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -41,6 +48,16 @@ const Category = () => {
   const recomendedCategories = jobs?.filter((job) =>
     interestedCategories?.includes(job.category)
   );
+  //creating fuse instance
+  const fuse = useMemo(() => createFuseInstance(jobs || []), [jobs]);
+
+  //performing search using fuse
+
+  const filteredJobs = useMemo(() => {
+    if (!fuse || !search) return jobs;
+    const results = fuse.search(search.trim());
+    return results.map((result) => result.item);
+  }, [search, fuse, jobs]);
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
@@ -68,7 +85,8 @@ const Category = () => {
         ))}
       </div>
 
-      {(interestedCategories?.length ?? 0) > 0 && (recomendedCategories?.length ?? 0) > 0? (
+      {(interestedCategories?.length ?? 0) > 0 &&
+      (recomendedCategories?.length ?? 0) > 0 ? (
         <div className="mt-12 bg-gradient-to-br from-purple-50 via-white to-purple-100 p-6 rounded-2xl border border-purple-200 border-solid shadow-md">
           <h2 className="text-2xl font-bold text-purple-800 mb-6">
             🎯 Recommended for You
@@ -92,9 +110,9 @@ const Category = () => {
 
       <div className="mt-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {jobs?.map((job) => (
-            <JobCard key={job.id} job={job} />
-          ))}
+          {fuse && search
+            ? filteredJobs?.map((job) => <JobCard key={job.id} job={job} />)
+            : jobs?.map((job) => <JobCard key={job.id} job={job} />)}
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { SiApostrophe } from "react-icons/si";
 import { TfiLayoutGrid4Alt } from "react-icons/tfi";
 import type { SidebarProps } from "../types/sidebar/sidebarType";
-const Sidebar = ({ setCategory,category }: SidebarProps) => {
+const Sidebar = ({ setCategory, category }: SidebarProps) => {
   return (
     <div className="w-[15%]  bg-purple-900 text-white flex flex-col gap-4 p-4 scroll-none max-h-full ">
       <h1 className="font-serif">{">>  "}Dashboard</h1>
@@ -32,7 +32,6 @@ const Sidebar = ({ setCategory,category }: SidebarProps) => {
           Category
         </Button>
       </div>
-      
     </div>
   );
 };

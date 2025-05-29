@@ -1,6 +1,8 @@
 import { useGetUserByIdQuery } from "../../store/register/registerService"
 import JobCard from "../../components/JobCard";
 import Title from "../../components/Title";
+import DeleteIcon from "@mui/icons-material/Delete";
+import {IconButton} from "@mui/material";
 const SavedJobPage = () => {
     const storedUser = JSON.parse(localStorage.getItem("user") || "{}")
     const {
@@ -20,8 +22,6 @@ const SavedJobPage = () => {
         ready!"
       />
 
-      
-
       {savedJobs?.length === 0 ? (
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center text-gray-600 dark:text-gray-300 mt-4">
           You have no saved jobs.
@@ -29,7 +29,13 @@ const SavedJobPage = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-8">
           {savedJobs?.map((job) => (
-            <JobCard key={job.id} job={job} />
+            <div key={job.id} className="relative">
+              <IconButton className=" z-10  absolute top-36 left-[74%] text-red-500 hover:text-red-700 !rounded-full  ">
+                <DeleteIcon />
+              </IconButton>
+              
+              <JobCard job={job} />
+            </div>
           ))}
         </div>
       )}

@@ -1,12 +1,21 @@
-import { NavLink } from "react-router-dom";
+
 import logo from "../assets/logo1.png";
 import GroupButton from "./GroupButton";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import SearchIcon from "@mui/icons-material/Search";
 import CustomMenu from "./CunstomMenu";
+import { IconButton } from "@mui/material";
+import { useNavigate, useLocation } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate()
- const token = localStorage.getItem("token");
+  const location = useLocation();
+
+  const token = localStorage.getItem("token");
+  const handleClick = () => {
+    if (location.pathname !== "/dashboard") {
+      navigate("/dashboard");
+    }
+  };
 
   console.log("Token:", token);
   return (
@@ -20,35 +29,6 @@ const Navbar = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
       />
-
-      {/* Navigation Links */}
-      {!token && (
-        <ul className="hidden sm:flex gap-5 text-sm text-black text-center h-16 items-center">
-          <NavLink
-            to="/"
-            className="flex items-center justify-center gap-1 flex-col h-full"
-          >
-            <p>HOME</p>
-            <hr className="w-3/4 h-0.5 bg-black hidden" />
-          </NavLink>
-
-          <NavLink
-            to="/about"
-            className="flex items-center justify-center gap-1 flex-col h-full"
-          >
-            <p>ABOUT</p>
-            <hr className="w-3/4 h-0.5 bg-black hidden" />
-          </NavLink>
-
-          <NavLink
-            to="/contact"
-            className="flex items-center justify-center gap-1 flex-col h-full"
-          >
-            <p>CONTACT</p>
-            <hr className="w-3/4 h-0.5 bg-black hidden" />
-          </NavLink>
-        </ul>
-      )}
 
       {/* Group Button */}
       <div className="flex flex-row gap-5">
@@ -69,6 +49,9 @@ const Navbar = () => {
             />
           </motion.div>
         )}
+        <IconButton size="large" onClick={handleClick}>
+          <SearchIcon />
+        </IconButton>
 
         {token && <CustomMenu />}
       </div>

@@ -6,7 +6,7 @@ import s3 from "../assets/search3.jpg";
 import SearchIcon from '@mui/icons-material/Search';
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
-const SearchBox = () => {
+const Hero = () => {
   return (
     <Stack
       direction="row"
@@ -110,4 +110,4 @@ const SearchBox = () => {
   );
 };
 
-export default SearchBox;
+export default Hero;
