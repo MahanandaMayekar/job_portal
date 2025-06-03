@@ -2,19 +2,15 @@ import {
   Box,
   Button,
   Container,
+  Paper,
   TextField,
   Typography,
-  Paper,
 } from "@mui/material";
 
 const ApplyJobPage = () => {
   return (
     <Container maxWidth="sm">
-      <Paper
-        elevation={3}
-        sx={{ mt: 8, p: 4, borderRadius: 2 }}
-       
-      >
+      <Paper elevation={3} sx={{ mt: 8, p: 4, borderRadius: 2 }}>
         <Typography variant="h5" gutterBottom>
           Apply for Job
         </Typography>
@@ -32,13 +28,15 @@ const ApplyJobPage = () => {
             fullWidth
             variant="outlined"
           />
-          <TextField
-            label="Cover Letter"
-            multiline
-            rows={4}
-            fullWidth
-            variant="outlined"
-          />
+          <Button variant="outlined" component="label">
+            Upload Cover Letter
+            <input
+              className="hidden"
+              type="file"
+              accept=".pdf,.doc,.docx"
+             
+            />
+          </Button>
           <Button variant="contained" color="primary">
             Submit Application
           </Button>

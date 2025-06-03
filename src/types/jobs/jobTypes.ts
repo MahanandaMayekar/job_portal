@@ -22,3 +22,13 @@ export type JobType = {
 export type JobCardProps = {
     job:JobType
 }
+
+
+export type ApplyJobType = {
+    jobId?: string;
+    userId?: string;
+    email: string;
+    address: string;
+    contact: string;
+    coverLetterFile?: string;
+}

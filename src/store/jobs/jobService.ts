@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { JobType } from "../../types/jobs/jobTypes";
-
+import type { ApplyJobType } from "../../types/jobs/jobTypes";
 export const jobApi = createApi({
   reducerPath: "JobApi",
   baseQuery: fetchBaseQuery({
@@ -15,8 +15,17 @@ export const jobApi = createApi({
     fetchJobsByCategory: builder.query<JobType[], string>({
       query: (category) => `jobs?category=${category}`,
     }),
+
     fetchJobById: builder.query<JobType, string>({
       query: (id) => `jobs/${id}`,
+    }),
+
+    applyJob: builder.mutation<any, ApplyJobType>({
+      query: (applicationData) => ({
+        url: "appliedJobs",
+        method: "POST",
+        body: applicationData,
+      }),
     }),
   }),
 });
@@ -26,4 +35,5 @@ export const {
   useFetchJobsQuery,
   useFetchJobsByCategoryQuery,
   useFetchJobByIdQuery,
+  useApplyJobMutation, 
 } = jobApi;
