@@ -234,8 +234,82 @@
         "Development",
         "Human Resource"
       ],
-      "savedPosts": [],
-      "appliedPosts": [],
+      "savedPosts": [
+        {
+          "id": "des-001",
+          "title": "UI/UX Designer",
+          "company": "PixelCraft Studios",
+          "location": "Bangalore, India",
+          "salary_from": 60000,
+          "salary_to": 90000,
+          "employment_type": "Full-time",
+          "application_deadline": "2025-07-15",
+          "qualifications": [
+            "Figma expert",
+            "3+ years UI/UX",
+            "Strong portfolio",
+            "Knowledge of accessibility"
+          ],
+          "contact": "+91-9922334455",
+          "job_category": "UX Designer",
+          "is_remote_work": 1,
+          "number_of_opening": 1,
+          "created_at": "2025-05-10",
+          "updated_at": "2025-05-20",
+          "category": "Design",
+          "description": "Join our creative team as a UI/UX Designer to craft engaging user experiences for web and mobile platforms. You'll work on intuitive interfaces, user flows, and high-fidelity prototypes for diverse projects across industries."
+        }
+      ],
+      "appliedPosts": [
+        {
+          "id": "c9aa1d9e-c00e-4c64-9801-ec5e7cc00830",
+          "title": "Frontend Developer",
+          "description": "We are looking for a results-driven Marketing Executive to help shape our brand's voice across digital platforms. You will lead the planning and execution of marketing campaigns across channels like SEO, Google Ads, email, and social media. This role requires a mix of creativity and analytical skills to optimize campaigns for performance. You'll also track key metrics, generate reports, and work with cross-functional teams to ensure consistent brand messaging. The ideal candidate is proactive, data-driven, and excited about connecting with customers through compelling digital experiences.",
+          "company": "TechHarvest",
+          "location": "Hyderabad, India",
+          "salary_from": 80000,
+          "salary_to": 120000,
+          "employment_type": "Full-time",
+          "application_deadline": "2025-07-01",
+          "qualifications": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Unit Testing"
+          ],
+          "contact": "+91-99887-66554",
+          "job_category": "Frontend Developer",
+          "is_remote_work": 1,
+          "number_of_opening": 3,
+          "created_at": "2025-05-10",
+          "updated_at": "2025-05-19",
+          "category": "Development"
+        },
+        {
+          "id": "hr-001",
+          "title": "HR Manager",
+          "company": "PeopleMatter Inc.",
+          "location": "Chennai, India",
+          "salary_from": 95000,
+          "salary_to": 130000,
+          "employment_type": "Full-time",
+          "application_deadline": "2025-06-10",
+          "qualifications": [
+            "MBA HR",
+            "5+ years experience",
+            "Employee Engagement",
+            "HRMS tools knowledge"
+          ],
+          "contact": "+91-9876501234",
+          "job_category": "HR Manager",
+          "is_remote_work": 0,
+          "number_of_opening": 1,
+          "created_at": "2025-05-03",
+          "updated_at": "2025-05-20",
+          "category": "Human Resources",
+          "description": "We are seeking a strategic and compassionate HR Manager to oversee our human resources department. You will be responsible for designing and implementing HR policies that align with our business goals while promoting a positive and inclusive workplace culture. You will lead initiatives in recruitment, employee engagement, performance management, and compliance. Proficiency with HRMS tools and a deep understanding of employment laws are crucial for success in this role. If you are passionate about fostering a productive work environment and have a proven track record in HR leadership, we would love to hear from you."
+        }
+      ],
       "DOB": "2021-06-02",
       "address": "Street 503",
       "country": "India",
@@ -1484,6 +1558,43 @@
       "created_at": "Fri, 12/01/2023",
       "updated_at": "Sat, 12/09/2023",
       "category": "Development"
+    }
+  ],
+  "appliedJobs": [
+    {
+      "id": "a4ba",
+      "email": "diksha.m@gmail.com",
+      "address": "asdfghj",
+      "contact": "01234567891",
+      "userId": "bcaa",
+      "coverLetterFile": "Holiday Calender - 2025 (1).pdf"
+    },
+    {
+      "id": "5fe5",
+      "email": "diksha.m@gmail.com",
+      "address": "asdfghj",
+      "contact": "01234567891",
+      "userId": "bcaa",
+      "jobId": "des-001",
+      "coverLetterFile": "Holiday Calender - 2025 (1).pdf"
+    },
+    {
+      "id": "caeb",
+      "email": "diksha.m@gmail.com",
+      "address": "asdfghj",
+      "contact": "01234567891",
+      "userId": "bcaa",
+      "jobId": "c9aa1d9e-c00e-4c64-9801-ec5e7cc00830",
+      "coverLetterFile": "Holiday Calender - 2025 (1).pdf"
+    },
+    {
+      "id": "2794",
+      "email": "diksha.m@gmail.com",
+      "address": "asdfghj",
+      "contact": "01234567891",
+      "userId": "bcaa",
+      "jobId": "hr-001",
+      "coverLetterFile": "Offer of Internship - Mahananda Mayekar (signed).pdf"
     }
   ]
 }

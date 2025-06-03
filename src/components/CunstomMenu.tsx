@@ -59,7 +59,9 @@ const CustomMenu = () => {
         <MenuItem value="saved" onClick={() => navigate("/savedJobs")}>
           Saved Posts
         </MenuItem>
-        <MenuItem value="saved">Applied Posts</MenuItem>
+        <MenuItem value="saved" onClick={() => navigate("/users/applied-jobs")}>
+          Applied Posts
+        </MenuItem>
         <MenuItem value="saved" onClick={() => navigate("/settings")}>
           Settings
         </MenuItem>
