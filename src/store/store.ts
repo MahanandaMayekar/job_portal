@@ -3,12 +3,14 @@ import { LoginApi } from "./login/LoginService";
 import { registerApi } from "./register/registerService"
 import authReducer from "./auth/AuthService";
 import { jobApi } from "./jobs/jobService";
+import searchReducer from "./search/SearchSlice"
 export const store = configureStore({
   reducer: {
     [LoginApi.reducerPath]: LoginApi.reducer,
     [registerApi.reducerPath]: registerApi.reducer,
     [jobApi.reducerPath]: jobApi.reducer,
     auth: authReducer,
+    search:searchReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()

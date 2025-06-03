@@ -50,7 +50,9 @@ const CustomMenu = () => {
           borderRadius: "10rem",
         }}
       >
-        <MenuItem value="profile">Profile</MenuItem>
+        <MenuItem value="profile" onClick={() => navigate("/profile")}>
+          Profile
+        </MenuItem>
         <MenuItem value="dashboard" onClick={() => navigate("/dashboard")}>
           Dashboard
         </MenuItem>
@@ -58,6 +60,9 @@ const CustomMenu = () => {
           Saved Posts
         </MenuItem>
         <MenuItem value="saved">Applied Posts</MenuItem>
+        <MenuItem value="saved" onClick={() => navigate("/settings")}>
+          Settings
+        </MenuItem>
         <hr />
 
         <div>

@@ -6,6 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import CustomMenu from "./CunstomMenu";
 import { IconButton } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
+import SearchBar from "./SearchBar";
 const Navbar = () => {
   const navigate = useNavigate()
   const location = useLocation();
@@ -28,10 +29,11 @@ const Navbar = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
+        onClick={() => navigate("/")}
       />
 
       {/* Group Button */}
-      <div className="flex flex-row gap-5">
+      <div className="flex items-center gap-5 flex-1 justify-end">
         {!token && (
           <motion.div
             className="flex items-center gap-6 justify-center"
@@ -51,12 +53,16 @@ const Navbar = () => {
         )}
 
         {token && (
-          <IconButton size="large" onClick={handleClick}>
-            <SearchIcon />
-          </IconButton>
+          <div className="flex flex-1 w-full min-w-[200px] sm:min-w-[300px] max-w-[500px]">
+            <SearchBar />
+          </div>
         )}
 
-        {token && <CustomMenu />}
+        {token && (
+          <div className="flex justify-end">
+            <CustomMenu />
+          </div>
+        )}
       </div>
     </div>
   );

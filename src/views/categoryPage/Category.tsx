@@ -7,13 +7,7 @@ import { SiAdblock } from "react-icons/si";
 import JobCard from "../../components/JobCard";
 import Title from "../../components/Title";
 import { useFetchJobsByCategoryQuery } from "../../store/jobs/jobService";
-import { useMemo } from "react";
-import { createFuseInstance } from "../../utils/createFuseInstance";
 
-
-type CategoryPageProps = {
-  search?: string;
-};
 const categories = [
   {
     icon: <FaMoneyCheckDollar size={32} />,
@@ -39,7 +33,7 @@ const categories = [
 ];
 
 
-const Category = ({ search = "" }: CategoryPageProps) => {
+const Category = () => {
   const [cate, setCate] = useState<string>("");
   const { data: jobs, isLoading, error } = useFetchJobsByCategoryQuery(cate);
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -48,16 +42,7 @@ const Category = ({ search = "" }: CategoryPageProps) => {
   const recomendedCategories = jobs?.filter((job) =>
     interestedCategories?.includes(job.category)
   );
-  //creating fuse instance
-  const fuse = useMemo(() => createFuseInstance(jobs || []), [jobs]);
-
-  //performing search using fuse
-
-  const filteredJobs = useMemo(() => {
-    if (!fuse || !search) return jobs;
-    const results = fuse.search(search.trim());
-    return results.map((result) => result.item);
-  }, [search, fuse, jobs]);
+  
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
@@ -110,9 +95,7 @@ const Category = ({ search = "" }: CategoryPageProps) => {
 
       <div className="mt-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {fuse && search
-            ? filteredJobs?.map((job) => <JobCard key={job.id} job={job} />)
-            : jobs?.map((job) => <JobCard key={job.id} job={job} />)}
+         {jobs?.map((job) => <JobCard key={job.id} job={job} />)}
         </div>
       </div>
     </div>

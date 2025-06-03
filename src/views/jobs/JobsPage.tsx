@@ -3,12 +3,12 @@ import { useFetchJobsQuery } from "../../store/jobs/jobService";
 import JobCard from "../../components/JobCard";
 import { useMemo } from "react";
 import { createFuseInstance } from "../../utils/createFuseInstance";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store/store";
 
-type JobsPageProps = {
-  search?: string;
-};
 
-const JobsPage = ({ search = "" }: JobsPageProps) => {
+const JobsPage = () => {
+  const search=useSelector((state:RootState)=>state.search.query)
   const { data: jobs, isLoading, error } = useFetchJobsQuery();
 
   //creating fuse instance

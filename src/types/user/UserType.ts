@@ -1,5 +1,12 @@
 import type { JobType } from "../jobs/jobTypes";
-
+type Experience = {
+  company: string,
+  roleAtCompany: string,
+  location: string,
+  startDate: string,
+  endDate: string,
+  description:string
+}
 export type UserType = {
     id?:string,
   fullName: string;
@@ -9,5 +16,15 @@ export type UserType = {
   isFirstLogin: boolean;
   interestedCategories: string[];
   savedPosts?: JobType[];
-    appliedPosts?: JobType[];
+  appliedPosts?: JobType[];
+  DOB?: string,
+  address?: string,
+  country?: string,
+  code?: string,
+  contact?:string,
+  occupation?: string,
+  introduction?: string,
+  skills?: string[],
+  experience?:Experience[]
+    
 };

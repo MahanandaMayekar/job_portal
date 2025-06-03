@@ -55,7 +55,16 @@ const RegisterContainer = () => {
       isFirstLogin: data.isFirstLogin,
       interestedCategories: data.interestedCategories,
       savedPosts: [], // initialize empty array
-      appliedPosts: [], // fixed spelling and initialized empty array
+      appliedPosts: [],
+      DOB: "",
+      address: "",
+      country: "",
+      code: "", // instead of 0
+      contact: "", // instead of 0
+      occupation: "",
+      introduction: "",
+      skills: [],
+      experience: [],
     };
 
     try {

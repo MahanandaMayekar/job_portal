@@ -20,7 +20,7 @@ export const saveJob = async (
 
     try {
         const updatedUser = await updateUser({
-            id: storedUser.id,
+            id: storedUser?.id,
             updateData: {
                 savedPosts: updatedPosts,
             },

@@ -157,6 +157,115 @@
         }
       ],
       "appliedPosts": []
+    },
+    {
+      "id": "4220",
+      "fullName": "neha g",
+      "email": "neha@gmail.com",
+      "password": "neha123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Accounting",
+        "Human Resource",
+        "Design"
+      ],
+      "savedPosts": [
+        {
+          "id": "des-001",
+          "title": "UI/UX Designer",
+          "company": "PixelCraft Studios",
+          "location": "Bangalore, India",
+          "salary_from": 60000,
+          "salary_to": 90000,
+          "employment_type": "Full-time",
+          "application_deadline": "2025-07-15",
+          "qualifications": [
+            "Figma expert",
+            "3+ years UI/UX",
+            "Strong portfolio",
+            "Knowledge of accessibility"
+          ],
+          "contact": "+91-9922334455",
+          "job_category": "UX Designer",
+          "is_remote_work": 1,
+          "number_of_opening": 1,
+          "created_at": "2025-05-10",
+          "updated_at": "2025-05-20",
+          "category": "Design",
+          "description": "Join our creative team as a UI/UX Designer to craft engaging user experiences for web and mobile platforms. You'll work on intuitive interfaces, user flows, and high-fidelity prototypes for diverse projects across industries."
+        }
+      ],
+      "appliedPosts": [],
+      "DOB": "2020-01-02",
+      "address": "15 Razy street",
+      "country": "India",
+      "code": "403502",
+      "contact": "80809451441",
+      "occupation": "Web designer",
+      "introduction": "Obviously I'M Web Developer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects. The as opposed to using 'Content here, content here', making it look like readable English.\n\nData Structures and Algorithms are the heart of programming. Initially most of the developers do not realize its importance but when you will start your career in software development, you will find your code is either taking too much time or taking too much space.",
+      "skills": [
+        "javascript",
+        "react js",
+        "html/css",
+        "typescript",
+        "node.js"
+      ],
+      "experience": [
+        {
+          "company": "Shreethemes",
+          "roleAtCompany": "Full Stack Developer",
+          "location": "  India",
+          "startDate": "2023-01-02",
+          "endDate": "2025-06-02",
+          "description": "t seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text."
+        }
+      ]
+    },
+    {
+      "id": "bcaa",
+      "fullName": "Mark Silva",
+      "email": "mark@gmail.com",
+      "password": "mark123",
+      "role": "candidate",
+      "isFirstLogin": false,
+      "interestedCategories": [
+        "Design",
+        "Development",
+        "Human Resource"
+      ],
+      "savedPosts": [],
+      "appliedPosts": [],
+      "DOB": "2021-06-02",
+      "address": "Street 503",
+      "country": "India",
+      "code": "402503",
+      "contact": "8080945141",
+      "occupation": "web developer",
+      "introduction": "Obviously I'M Web Developer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects. The as opposed to using 'Content here, content here', making it look like readable English.\n\nData Structures and Algorithms are the heart of programming. Initially most of the developers do not realize its importance but when you will start your career in software development, you will find your code is either taking too much time or taking too much space.",
+      "skills": [
+        "javascript",
+        "css",
+        "html"
+      ],
+      "experience": [
+        {
+          "company": "Shreethemes",
+          "roleAtCompany": "Full Stack Developer",
+          "location": "India",
+          "startDate": "2023-06-02",
+          "endDate": "2024-06-02",
+          "description": "\n\nIt seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text."
+        },
+        {
+          "company": "Ai Thinkers",
+          "roleAtCompany": "frontend Intern",
+          "location": "india",
+          "startDate": "2025-01-02",
+          "endDate": "2025-04-02",
+          "description": "It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text."
+        }
+      ]
     }
   ],
   "jobs": [
